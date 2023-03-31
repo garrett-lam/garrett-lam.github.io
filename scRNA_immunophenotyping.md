@@ -1,7 +1,7 @@
 # Immunophenotyping scRNA-seq data using Seurat 
 RNA samples of CD40-treated & non-treated Triple-Negative Breast Cancer (TNBC) _mus musculus_ models were processed using 10x Genomics Cell Ranger Pipeline to produce scRNA-seq data
 
-![cellranger](CellRanger_1sample-1flow.png)
+![cellranger](CellRanger_1flow.png)
 
 ## Seurat Preprocessing
 Seurat is a R package used for scRNA-seq data processing, cell clustering, and immunophenotyping 
