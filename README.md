@@ -1,4 +1,3 @@
-# My Bioinformatics Projects
+# Garrett Lam's Bioinformatics Projects
 
-### Here is a list of some of my bioinformatics projects:
 - 
