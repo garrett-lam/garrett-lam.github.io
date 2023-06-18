@@ -61,11 +61,23 @@ Seurat is a R package used for scRNA-seq data processing, cell clustering, and i
 ## CD40-treated TNBC _mus musculus_
 A resolution of 0.7 was used when using `FindClusters()`
 
-![](cd40_before.png)  ![](cd40_after.png)
+Before immunophenotyping:
+
+![](cd40_before.png)  
+
+After immunophenotyping:
+
+![](cd40_after.png)
 
 
 ## Non-treated TNBC _mus musculus_
 A resolution of 0.7 was used when using `FindClusters()`
 
-![](NT_before.png)  ![](NT_after.png)
+Before immunophenotyping:
+
+![](NT_before.png)  
+
+After immunophenotyping:
+
+![](NT_after.png)
 
