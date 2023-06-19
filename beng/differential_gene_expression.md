@@ -30,9 +30,9 @@ Fold change is a value that represents to what extent a particular gene is diffe
 ## What kind of downstream analysis can we do after differential gene expression analysis?
 One of the popular tools that we can use after differential gene expression analysis is Metascape. Metascape is a free gene annotation and analysis tool that assists biologists in making sense of one or more gene lists. From our differential gene expression analysis, we may create a list of differentially expressed genes. This list may then be uploaded to Metascape for functional analysis, where predicted alterations implications common or unique biological pathways pathways and protein networks can be identified.
 
-## Differential Gene Expression Analysis Tools
+# Differential Gene Expression Analysis Tools
 
-### CuffDiff
+## CuffDiff
 
 #### What is Cufflinks/CuffDiff(2)
 Cufflinks assembles transcripts in RNA-Seq samples, calculates their abundances, and checks for differential expression and regulation. It puts together a limited set of transcripts using aligned RNA-Seq data. The relative abundances of these transcripts are then determined by Cufflinks based on the amount of reads supporting each one and taking into account biases in library preparation processes. The Cufflinks pipeline contains a tool called Cuffdiff that determines which genes exhibit differential expression. Additionally, it can compare the levels of gene expression and inform users of which genes are up- or down-regulated in response to two or more situations. Behind the scenes, Cuffdiff calculates and determines which genes are differentially expressed using the poisson distribution. 
@@ -134,7 +134,7 @@ Sam tools download: `git clone https://github.com/samtools/samtools.git`
 
 Eigen download: `git clone https://gitlab.com/libeigen/eigen.git`
 
-### edgeR(5-7)
+## edgeR(5-7)
 
 #### What is edgeR
 edgeR takes as input count data from sequencing technologies to perform differential gene expression analysis (using RNA-seq or SAGE data) or differential marking analysis (using ChIP-seq data). 
@@ -167,7 +167,7 @@ Read in the data → annotate data and keep transcripts with IDs present in up-t
     - Based on the list of differentially expressed genes, identify biological pathways and protein networks that are disrupted.
 
 
-### DESeq2(8)
+## DESeq2(8)
 
 #### What is DESeq2
 A differential gene expression analysis package that estimates variance-mean dependence in counts matrix (from sequencing technologies) and tests for differential expression of genes using negative binomial distribution
