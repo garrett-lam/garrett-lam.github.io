@@ -6,6 +6,8 @@ This repository contains my portfolio of personal / group projects completed for
 
 - [Immunophenotyping scRNA-seq data](https://github.com/garrett-lam/garrett-lam.github.io/blob/main/hollern_lab/scRNA_immunophenotyping.md): Analyzed scRNA-seq CD40-treated & non-treated Triple-Negative Breast Cancer *mus musculus* models in Seurat
 
+- [Methods for Differential Gene Expression Analysis](https://github.com/garrett-lam/garrett-lam.github.io/blob/main/beng/differential_gene_expression.md): Compare and contrasted various methods of differential gene expression analysis (CuffDiff, edgeR, DESeq2)
+
 ## Data Science / Machine Learning
 
 - [Epileptic Seizure Prediction from Electroencephalogram Data](https://github.com/garrett-lam/garrett-lam.github.io/blob/main/ds3/epileptic_seizure_prediction.ipynb) [[Project Paper]](https://docs.google.com/document/d/1z0yGWbZPRzeD8ya7fw3oiiN10p57gkzswT-5CzGyN3A/edit?usp=sharing): Developed classification models (Logistic Regression, Naive Bayesian, KNN, SVM, Decision Trees) to identify the optimal model for accurately predicting epileptic seizures from EEG data 
