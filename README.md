@@ -1,4 +1,4 @@
-# Garrett Lam's Portfoilio
+# Garrett Lam's Portfolio
 This repository contains my portfolio of personal / group projects completed for academic, professional, and self-learning purposes.
 
 ## Bioinformatics
@@ -6,7 +6,7 @@ This repository contains my portfolio of personal / group projects completed for
 
 - [Immunophenotyping scRNA-seq data](https://github.com/garrett-lam/garrett-lam.github.io/blob/main/hollern_lab/scRNA_immunophenotyping.md): Analyzed scRNA-seq CD40-treated & non-treated Triple-Negative Breast Cancer *mus musculus* models in Seurat
 
-- [Methods for Differential Gene Expression Analysis](https://github.com/garrett-lam/garrett-lam.github.io/blob/main/beng/differential_gene_expression.md): Compare and contrasted various methods of differential gene expression analysis (CuffDiff, edgeR, DESeq2)
+- [Methods for Differential Gene Expression Analysis](https://github.com/garrett-lam/garrett-lam.github.io/blob/main/beng/differential_gene_expression.md): Compared and contrasted various methods of differential gene expression analysis (CuffDiff, edgeR, DESeq2)
 
 ## Data Science / Machine Learning
 
