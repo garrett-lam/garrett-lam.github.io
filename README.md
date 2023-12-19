@@ -10,7 +10,7 @@ This repository contains my portfolio of personal / group projects completed for
 
 ## Data Science / Machine Learning
 
-- [Clinical Predictive Modeling for Breast Cancer Patient Survival](https://github.com/garrett-lam/BC_survival_prognosis/blob/main/BC_survival_prognosis.ipynb) [[Project Paper]](https://docs.google.com/document/d/1z0yGWbZPRzeD8ya7fw3oiiN10p57gkzswT-5CzGyN3A/edit?usp=sharing): Built a FNN using PyTorch to predict survival prognosis of hospitalized patients based on clinical EHR data; Benchmarked FNN performance against classification models (Logistic Regression, SVM, Random Forest) by computing AUC, precision, recall, sensitivity, and F1 scores.
+- [Clinical Predictive Modeling for Breast Cancer Patient Survival](https://github.com/garrett-lam/BC_survival_prognosis/blob/main/BC_survival_prognosis.ipynb) [[Project Paper]](https://docs.google.com/document/d/1z0yGWbZPRzeD8ya7fw3oiiN10p57gkzswT-5CzGyN3A/edit?usp=sharing): Built a FNN using PyTorch to predict survival prognosis of hospitalized patients based on clinical EHR data
 
 - [Epileptic Seizure Prediction from Electroencephalogram Data](https://github.com/garrett-lam/garrett-lam.github.io/blob/main/ds3/epileptic_seizure_prediction.ipynb) [[Project Paper]](https://docs.google.com/document/d/11CUAqTTKbSjTeA1RKBGUYSmB97PoA1dHM3y0ajxA7CI/edit?usp=sharing): Developed classification models (Logistic Regression, Naive Bayesian, KNN, SVM, Decision Trees) to identify the optimal model for accurately predicting epileptic seizures from EEG data 
 
