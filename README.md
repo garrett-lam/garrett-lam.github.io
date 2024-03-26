@@ -10,6 +10,8 @@ This repository contains my portfolio of personal / group projects completed for
 
 ## Data Science / Machine Learning
 
+- [Comparative Study of Activation Functions and Pooling Methods on Histopathological Image Analysis](https://github.com/garrett-lam/CancerHistopathologyCNN/blob/main/lung_colon_CNN.ipynb) [[Project Report]](https://drive.google.com/file/d/1ckHMQ1iliQAhXdR8RIX_t7ZVHiCOMLs-/view?usp=share_link): Developed lightweight ELU-MaxPool CNN model, achieving 95% accuracy, with fewer parameters and training duration relative to complex state-of-the-art CNN models (ResNet18, EfficientNetV2) to improve lung and colon cancer detection via histopathological images
+
 - [Clinical Predictive Modeling for Breast Cancer Patient Survival](https://github.com/garrett-lam/BC_survival_prognosis/blob/main/BC_survival_prognosis.ipynb) [[Project Report]](https://docs.google.com/document/d/11CUAqTTKbSjTeA1RKBGUYSmB97PoA1dHM3y0ajxA7CI/edit?usp=sharing): Built a FNN using PyTorch to predict survival prognosis of hospitalized patients based on clinical EHR data
 
 - [Epileptic Seizure Prediction from Electroencephalogram Data](https://github.com/garrett-lam/garrett-lam.github.io/blob/main/ds3/epileptic_seizure_prediction.ipynb) [[Project Report]](https://docs.google.com/document/d/1z0yGWbZPRzeD8ya7fw3oiiN10p57gkzswT-5CzGyN3A/edit?usp=sharing): Developed classification models (Logistic Regression, Naive Bayesian, KNN, SVM, Decision Trees) to identify the optimal model for accurately predicting epileptic seizures from EEG data 
