@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #1E1E1E;
+    color: #D4D4D4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.terminal {
+    width: 90%;
+    max-width: 900px;
+    height: 600px;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    background-color: #252526;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.close {
+    background-color: #FF5F56;
+}
+
+.minimize {
+    background-color: #FFBD2E;
+}
+
+.maximize {
+    background-color: #27C93F;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 14px;
+    color: #9D9D9D;
+}
+
+.terminal-content {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.output {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.input-line {
+    display: flex;
+    position: relative;
+}
+
+.prompt {
+    color: #608B4E;
+    margin-right: 8px;
+    white-space: nowrap;
+}
+
+.input {
+    flex-grow: 1;
+    outline: none;
+    caret-color: #D4D4D4;
+    min-width: 10px;
+}
+
+/* Command outputs */
+.success {
+    color: #608B4E;
+}
+
+.error {
+    color: #F44747;
+}
+
+.info {
+    color: #9CDCFE;
+}
+
+.warning {
+    color: #CE9178;
+}
+
+.link {
+    color: #569CD6;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.menu-item {
+    color: #DCDCAA;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    text-decoration: underline;
+}
+
+pre {
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 15px;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 600px) {
+    .terminal {
+        width: 100%;
+        height: 85vh;
+    }
+    
+    .prompt {
+        font-size: 14px;
+    }
+    
+    .input {
+        font-size: 14px;
+    }
+}
