@@ -1,295 +1,212 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const output = document.getElementById('output');
-    const input = document.getElementById('input');
-    const terminal = document.querySelector('.terminal-content');
+    const contentSection = document.getElementById('content-section');
+    const typedText = document.getElementById('typed-text');
+    const cursor = document.getElementById('cursor');
+    const navButtons = document.querySelectorAll('.nav-button');
 
     // Content for each section
     const content = {
         home: {
-            title: "Home Directory",
-            content: `Welcome to my personal website terminal.
-            
-Type 'ls' to see available directories.
-Type 'cd [directory]' to navigate to a directory.
-Type 'help' for more commands.`
+            title: "Home",
+            content: `<div class="section-content">
+                <h1>Welcome to my Portfolio</h1>
+                <p>Hello! I'm Garrett Lam, a [your title/role] based in [your location]. This is my terminal-themed portfolio website.</p>
+                <p>Use the navigation buttons above to explore different sections, or enjoy the terminal experience by watching the simulated commands below.</p>
+                <p>Feel free to check out my projects and get in touch if you'd like to collaborate!</p>
+            </div>`
         },
         about: {
             title: "About Me",
-            content: `# About Me
-
-I'm Garrett Lam, a [your title/role] based in [your location].
-
-## Skills
-- Skill 1
-- Skill 2
-- Skill 3
-
-## Education
-- Degree, University, Year
-- Certification, Institution, Year
-
-## Interests
-- Interest 1
-- Interest 2
-- Interest 3`
+            content: `<div class="section-content">
+                <h1>About Me</h1>
+                <p>I'm Garrett Lam, passionate about [your interests]. I specialize in [your specialties].</p>
+                
+                <h2>Skills</h2>
+                <ul>
+                    <li>Skill 1</li>
+                    <li>Skill 2</li>
+                    <li>Skill 3</li>
+                    <li>Skill 4</li>
+                </ul>
+                
+                <h2>Interests</h2>
+                <ul>
+                    <li>Interest 1</li>
+                    <li>Interest 2</li>
+                    <li>Interest 3</li>
+                </ul>
+            </div>`
+        },
+        education: {
+            title: "Education",
+            content: `<div class="section-content">
+                <h1>Education</h1>
+                
+                <h2>University Name</h2>
+                <h3>Degree Name</h3>
+                <p>Year - Year</p>
+                <ul>
+                    <li>Notable achievement or coursework</li>
+                    <li>GPA or honors</li>
+                    <li>Relevant projects</li>
+                </ul>
+                
+                <h2>Previous Education</h2>
+                <h3>School/Program</h3>
+                <p>Year - Year</p>
+                <ul>
+                    <li>Achievement</li>
+                    <li>Relevant coursework</li>
+                </ul>
+                
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Certification 1 - Issuing Organization (Year)</li>
+                    <li>Certification 2 - Issuing Organization (Year)</li>
+                </ul>
+            </div>`
         },
         experience: {
-            title: "Work Experience",
-            content: `# Work Experience
-
-## [Company Name] - [Position]
-*[Date Range]*
-- Accomplishment 1
-- Accomplishment 2
-- Accomplishment 3
-
-## [Previous Company] - [Position]
-*[Date Range]*
-- Accomplishment 1
-- Accomplishment 2
-- Accomplishment 3`
+            title: "Experience",
+            content: `<div class="section-content">
+                <h1>Work Experience</h1>
+                
+                <h2>Company Name</h2>
+                <h3>Position Title</h3>
+                <p>Month Year - Present</p>
+                <ul>
+                    <li>Accomplishment or responsibility</li>
+                    <li>Accomplishment or responsibility</li>
+                    <li>Accomplishment or responsibility</li>
+                </ul>
+                
+                <h2>Previous Company</h2>
+                <h3>Position Title</h3>
+                <p>Month Year - Month Year</p>
+                <ul>
+                    <li>Accomplishment or responsibility</li>
+                    <li>Accomplishment or responsibility</li>
+                </ul>
+            </div>`
         },
         projects: {
             title: "Projects",
-            content: `# Projects
-
-## [Project Name]
-*[Technologies Used]*
-- Description of the project
-- Key features implemented
-- Link: [GitHub Repo](#)
-
-## [Another Project]
-*[Technologies Used]*
-- Description of the project
-- Key features implemented
-- Link: [Live Demo](#)`
-        },
-        contact: {
-            title: "Contact",
-            content: `# Contact Information
-
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn](#)
-- GitHub: [Your GitHub](#)
-- Twitter: [Your Twitter](#)
-
-Feel free to reach out to me through any of these channels!`
+            content: `<div class="section-content">
+                <h1>Projects</h1>
+                
+                <h2>Project Name</h2>
+                <p>Technologies: Technology 1, Technology 2, Technology 3</p>
+                <ul>
+                    <li>Description of the project and your role</li>
+                    <li>Key features implemented</li>
+                    <li>Challenges overcome</li>
+                    <li><a href="#" target="_blank">GitHub Repo</a> | <a href="#" target="_blank">Live Demo</a></li>
+                </ul>
+                
+                <h2>Another Project</h2>
+                <p>Technologies: Technology 1, Technology 2</p>
+                <ul>
+                    <li>Description of the project and your role</li>
+                    <li>Key features implemented</li>
+                    <li>Challenges overcome</li>
+                    <li><a href="#" target="_blank">GitHub Repo</a> | <a href="#" target="_blank">Live Demo</a></li>
+                </ul>
+            </div>`
         }
     };
 
-    let currentDirectory = 'home';
-    let history = [];
-    let historyIndex = -1;
-    let directories = ['home', 'about', 'experience', 'projects', 'contact'];
+    let currentSection = 'home';
+    let commandQueue = [
+        { command: 'ls', delay: 1000 },
+        { command: 'cat about.md', delay: 2000 },
+        { command: 'cd experience', delay: 2000 },
+        { command: 'ls -la', delay: 1500 }
+    ];
+    let isTyping = false;
+    
+    // Initialize with home content
+    updateContent('home');
+    setActiveNavButton('home');
+    
+    // Start typing animation for terminal effect
+    startTerminalAnimation();
 
-    // Initial welcome message
-    printOutput(`Type 'help' to see available commands.`, 'info');
-
-    // Event listeners
-    input.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('click', () => input.focus());
-
-    // Focus input on load
-    input.focus();
-
-    function handleKeyDown(e) {
-        if (e.key === 'Enter') {
-            e.preventDefault();
-            const command = input.textContent.trim();
-            if (command) {
-                executeCommand(command);
-                history.unshift(command);
-                historyIndex = -1;
-                input.textContent = '';
-            }
-        } else if (e.key === 'ArrowUp') {
-            e.preventDefault();
-            if (history.length > 0 && historyIndex < history.length - 1) {
-                historyIndex++;
-                input.textContent = history[historyIndex];
-                // Move cursor to end
-                const range = document.createRange();
-                const sel = window.getSelection();
-                range.selectNodeContents(input);
-                range.collapse(false);
-                sel.removeAllRanges();
-                sel.addRange(range);
-            }
-        } else if (e.key === 'ArrowDown') {
-            e.preventDefault();
-            if (historyIndex > -1) {
-                historyIndex--;
-                input.textContent = historyIndex >= 0 ? history[historyIndex] : '';
-                // Move cursor to end
-                const range = document.createRange();
-                const sel = window.getSelection();
-                range.selectNodeContents(input);
-                range.collapse(false);
-                sel.removeAllRanges();
-                sel.addRange(range);
-            }
-        } else if (e.key === 'Tab') {
-            e.preventDefault();
-            tabComplete();
-        }
-    }
-
-    function tabComplete() {
-        const text = input.textContent.trim();
-        if (text.startsWith('cd ')) {
-            const partial = text.substring(3).toLowerCase();
-            const matches = directories.filter(d => d.startsWith(partial) && d !== partial);
-            if (matches.length === 1) {
-                input.textContent = 'cd ' + matches[0];
-            }
-        }
-    }
-
-    function executeCommand(command) {
-        printOutput(`<span class="prompt">visitor@garrettlam:~${currentDirectory === 'home' ? '' : '/' + currentDirectory}$</span> ${command}`);
-        
-        const cmd = command.toLowerCase().trim();
-        const args = cmd.split(' ');
-
-        switch (args[0]) {
-            case 'ls':
-                listDirectories();
-                break;
-            case 'cd':
-                changeDirectory(args[1]);
-                break;
-            case 'cat':
-                if (args[1]) {
-                    displayContent(args[1]);
-                } else {
-                    printOutput('Usage: cat [file]', 'error');
-                }
-                break;
-            case 'pwd':
-                printOutput(`/home/visitor/${currentDirectory === 'home' ? '' : currentDirectory}`, 'success');
-                break;
-            case 'clear':
-                clearScreen();
-                break;
-            case 'echo':
-                printOutput(command.substring(5), 'info');
-                break;
-            case 'help':
-                showHelp();
-                break;
-            case 'about':
-                changeDirectory('about');
-                break;
-            case 'experience':
-                changeDirectory('experience');
-                break;
-            case 'projects':
-                changeDirectory('projects');
-                break;
-            case 'contact':
-                changeDirectory('contact');
-                break;
-            case 'home':
-                changeDirectory('home');
-                break;
-            default:
-                printOutput(`Command not found: ${command}. Type 'help' to see available commands.`, 'error');
-        }
-
-        // Scroll to bottom
-        terminal.scrollTop = terminal.scrollHeight;
-    }
-
-    function listDirectories() {
-        let result = '';
-        directories.forEach(dir => {
-            result += `<span class="menu-item" onclick="document.getElementById('input').textContent='cd ${dir}'; document.getElementById('input').dispatchEvent(new KeyboardEvent('keydown', {'key': 'Enter'}));">${dir}/</span>  `;
+    // Event listeners for navigation buttons
+    navButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const section = button.getAttribute('data-section');
+            updateContent(section);
+            setActiveNavButton(section);
         });
-        printOutput(result);
-    }
+    });
 
-    function changeDirectory(dir) {
-        if (!dir) {
-            printOutput('Usage: cd [directory]', 'error');
-            return;
-        }
-
-        if (dir === '..') {
-            currentDirectory = 'home';
-            printOutput(`Changed to directory: ${currentDirectory}/`, 'success');
-            return;
-        }
-
-        const targetDir = dir.toLowerCase();
-        if (directories.includes(targetDir)) {
-            currentDirectory = targetDir;
-            printOutput(`Changed to directory: ${currentDirectory}/`, 'success');
-            displayContent(currentDirectory);
-        } else {
-            printOutput(`Directory not found: ${dir}`, 'error');
-        }
-    }
-
-    function displayContent(section) {
+    function updateContent(section) {
+        currentSection = section;
         if (content[section]) {
-            const contentText = content[section].content;
-            const formatted = formatMarkdown(contentText);
-            printOutput(`<h2>${content[section].title}</h2>${formatted}`);
-        } else {
-            printOutput(`No content available for: ${section}`, 'error');
+            contentSection.innerHTML = content[section].content;
+            // Add typing effect to simulate changing directories
+            queueCommand(`cd ${section}`);
         }
     }
 
-    function formatMarkdown(text) {
-        // Basic markdown parsing
-        let formattedText = text
-            .replace(/^# (.*?)$/gm, '<h1>$1</h1>')
-            .replace(/^## (.*?)$/gm, '<h2>$1</h2>')
-            .replace(/^### (.*?)$/gm, '<h3>$1</h3>')
-            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-            .replace(/\*(.*?)\*/g, '<em>$1</em>')
-            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" class="link" target="_blank">$1</a>')
-            .replace(/- (.*?)$/gm, '• $1<br>')
-            .replace(/\n/g, '<br>');
-        
-        return formattedText;
+    function setActiveNavButton(section) {
+        navButtons.forEach(button => {
+            if (button.getAttribute('data-section') === section) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
     }
 
-    function clearScreen() {
-        output.innerHTML = '';
-    }
-
-    function showHelp() {
-        const helpText = `
-<span class="info">Available commands:</span>
-
-<span class="success">ls</span> - List directories
-<span class="success">cd [directory]</span> - Change to directory
-<span class="success">cd ..</span> - Go back to home
-<span class="success">pwd</span> - Print working directory
-<span class="success">cat [section]</span> - Display content of a section
-<span class="success">clear</span> - Clear the screen
-<span class="success">help</span> - Show this help
-
-<span class="info">Shortcuts:</span>
-<span class="success">about</span> - Go to About section
-<span class="success">experience</span> - Go to Experience section
-<span class="success">projects</span> - Go to Projects section
-<span class="success">contact</span> - Go to Contact section
-<span class="success">home</span> - Go to Home section
-`;
-        printOutput(helpText);
-    }
-
-    function printOutput(text, className = '') {
-        const outputElement = document.createElement('div');
-        outputElement.classList.add('output-line');
-        if (className) {
-            outputElement.classList.add(className);
+    function queueCommand(command) {
+        commandQueue.push({ command, delay: 1500 });
+        if (!isTyping) {
+            typeNextCommand();
         }
-        outputElement.innerHTML = text;
-        output.appendChild(outputElement);
-        terminal.scrollTop = terminal.scrollHeight;
+    }
+
+    function startTerminalAnimation() {
+        if (!isTyping) {
+            typeNextCommand();
+        }
+    }
+
+    function typeNextCommand() {
+        if (commandQueue.length === 0) {
+            // Add more commands to keep the terminal "alive"
+            setTimeout(() => {
+                commandQueue = [
+                    { command: 'ls -la', delay: 2000 },
+                    { command: `cd ${['home', 'about', 'education', 'experience', 'projects'][Math.floor(Math.random() * 5)]}`, delay: 2000 },
+                    { command: 'echo "Feel free to check out my projects!"', delay: 2500 }
+                ];
+                typeNextCommand();
+            }, 10000);
+            return;
+        }
+
+        const nextCommand = commandQueue.shift();
+        isTyping = true;
+        typedText.textContent = '';
+
+        let i = 0;
+        const typeChar = () => {
+            if (i < nextCommand.command.length) {
+                typedText.textContent += nextCommand.command.charAt(i);
+                i++;
+                setTimeout(typeChar, Math.random() * 100 + 50);
+            } else {
+                isTyping = false;
+                setTimeout(() => {
+                    typedText.textContent = '';
+                    if (commandQueue.length > 0) {
+                        typeNextCommand();
+                    }
+                }, nextCommand.delay);
+            }
+        };
+
+        typeChar();
     }
 });

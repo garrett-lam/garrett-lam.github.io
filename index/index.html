@@ -9,19 +9,51 @@
     <script src="../js/terminal.js" defer></script>
 </head>
 <body>
-    <div class="terminal">
-        <div class="terminal-header">
-            <div class="buttons">
-                <div class="button close"></div>
-                <div class="button minimize"></div>
-                <div class="button maximize"></div>
+    <div class="main-container">
+        <!-- Sidebar with profile and links -->
+        <div class="sidebar">
+            <div class="profile-container">
+                <div class="profile-image-container">
+                    <!-- Replace with your actual photo -->
+                    <div class="profile-image-placeholder">Your Photo Here</div>
+                </div>
+                <div class="profile-name">Garrett Lam</div>
+                <div class="social-links">
+                    <a href="mailto:your-email@example.com" class="social-link">
+                        <span class="icon">✉️</span> Email
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
+                        <span class="icon">🔗</span> LinkedIn
+                    </a>
+                    <a href="https://github.com/yourusername" target="_blank" class="social-link">
+                        <span class="icon">💻</span> GitHub
+                    </a>
+                    <!-- Add more social links as needed -->
+                </div>
             </div>
-            <div class="title">Terminal - Garrett Lam</div>
         </div>
-        <div class="terminal-content">
-            <div class="output-container">
-                <div class="intro">
-                    <pre>
+
+        <!-- Terminal main content -->
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="buttons">
+                    <div class="button close"></div>
+                    <div class="button minimize"></div>
+                    <div class="button maximize"></div>
+                </div>
+                <div class="title">Terminal - Garrett Lam</div>
+                <div class="navigation">
+                    <button class="nav-button" data-section="home">Home</button>
+                    <button class="nav-button" data-section="about">About</button>
+                    <button class="nav-button" data-section="education">Education</button>
+                    <button class="nav-button" data-section="experience">Experience</button>
+                    <button class="nav-button" data-section="projects">Projects</button>
+                </div>
+            </div>
+            <div class="terminal-content">
+                <div class="output-container">
+                    <div class="intro">
+                        <pre>
  _____                      _   _     _                    
 |  __ \                    | | | |   | |                   
 | |  \/  __ _  _ __   _ __ | |_| |_  | |     __ _  _ __ ___  
@@ -29,13 +61,15 @@
 | |_\ \| (_| || |    | |   | |_| |_  | |___| (_| || | | | | |
  \____/ \__,_||_|    |_|    \__|\__| \_____/\__,_||_| |_| |_|
                                                           
-Welcome to my terminal-based portfolio. Type 'help' for available commands.
-                    </pre>
-                </div>
-                <div class="output" id="output"></div>
-                <div class="input-line">
-                    <span class="prompt">visitor@garrettlam:~$</span>
-                    <span class="input" id="input" contenteditable="true" autofocus></span>
+Welcome to my terminal-based portfolio.
+                        </pre>
+                    </div>
+                    <div class="content-section" id="content-section"></div>
+                    <div class="prompt-line">
+                        <span class="prompt">visitor@garrettlam:~$</span>
+                        <span class="typed-text" id="typed-text"></span>
+                        <span class="cursor" id="cursor">_</span>
+                    </div>
                 </div>
             </div>
         </div>
