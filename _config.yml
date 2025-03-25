@@ -1,0 +1,20 @@
+title: "Garrett Lam"
+description: "Welcome to my portfolio"
+url: "https://garrett-lam.github.io"
+baseurl: ""  # this must be blank for username.github.io sites
+
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+
+plugins:
+  - jekyll-include-cache
+
+# Optional, but helpful for later
+markdown: kramdown
+theme: null
+minimal_mistakes_skin: "default"
+
+# Author info
+author:
+  name   : "Garrett Lam"
+  avatar : "/assets/images/avatar.png"
+  bio    : "Insert bio here"

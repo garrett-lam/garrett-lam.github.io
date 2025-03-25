@@ -1,0 +1,15 @@
+# macOS system file
+.DS_Store
+
+# Jekyll output folder (don't track built site locally)
+_site/
+
+# Ruby / Bundler related
+.bundle/
+vendor/
+Gemfile.lock
+
+# Optional: log/temp files
+*.log
+.sass-cache/
+.jekyll-cache/
