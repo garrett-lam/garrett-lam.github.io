@@ -13,3 +13,5 @@ Gemfile.lock
 *.log
 .sass-cache/
 .jekyll-cache/
+
+docs/*
