@@ -1,17 +1,17 @@
-# macOS system file
-.DS_Store
-
-# Jekyll output folder (don't track built site locally)
+# Ignore the contents of the _site directory and other cache directories
 _site/
+.sass-cache/
 
-# Ruby / Bundler related
-.bundle/
-vendor/
+# Ignore the directory for local files during development
+local/
+
+# Ignore the Gemfile that is generated
 Gemfile.lock
 
-# Optional: log/temp files
-*.log
-.sass-cache/
-.jekyll-cache/
+# Ingore files created by npm
+node_modules
+package-lock.json
 
-docs/*
+# 
+package.json
+.DS_Store
