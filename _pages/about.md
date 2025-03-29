@@ -11,10 +11,10 @@ My name is Garrett Lam. I’m an aspiring **Cloud Data Engineer** passionate abo
 
 With a **B.S. in Computer Science & Bioinformatics** from **UC San Diego**, I've contributed to projects involving cloud-native pipelines, performance optimization, and infrastructure design. I'm driven by a desire to automate processes, architect dependable infrastructure, and create organized systems that serve as foundation for data-driven innovation.
 
-Skills
+💻 Tech Stack
 ======
 **Programming Languages:** Python, SQL, Bash, R, Java, C++, C, JavaScript, WDL
 
-**Tools & Technologies:**: Airflow, Spark, Docker, AWS, GCP, Terraform, Pulumi, PostgreSQL, Firebase, Metabase
+**Tools & Technologies:** Airflow, Spark, Docker, AWS, GCP, Terraform, Pulumi, PostgreSQL, Firebase, Metabase
 
-**Frameworks & Libraries:**: Pandas, NumPy, Matplotlib, Scikit-Learn, PyTorch, Dask, Flask, Plotly, FastAPI
+**Frameworks & Libraries:** Pandas, NumPy, Matplotlib, Scikit-Learn, PyTorch, Dask, Flask, Plotly, FastAPI
