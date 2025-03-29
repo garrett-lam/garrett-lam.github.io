@@ -7,7 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-My name is Garrett Lam. I earned my **B.S. in Computer Science & Bioinformatics** from **UC San Diego**. I have extensive experience in bioinformatics, data engineering, and cloud computing, having worked at leading institutions such as the Salk Institute for Biological Studies, the Altman Clinical and Translational Research Institute, and UC San Diego Health. Throughout my career, I’ve collaborated with clinicians and researchers on projects focused on liver disease and triple-negative breast cancer. Currently, I develop large-scale data pipelines using cloud computing tools to process multi-omics data, and I analyze complex biological datasets to deliver valuable insights for healthcare professionals.
+My name is Garrett Lam. I’m an aspiring **Cloud Data Engineer** passionate about building scalable systems that transform complex data into actionable insights. I specialize in data engineering, cloud computing, and software development, with experience developing large-scale infrastructure at institutions, such as the Broad Institute of MIT and Harvard, Salk Institute for Biological Studies, UCSD Altman Clinical and Translational Research Institute, and UCSD Health.
+
+With a **B.S. in Computer Science & Bioinformatics** from **UC San Diego**, I've contributed to projects involving cloud-native pipelines, performance optimization, and infrastructure design. I'm driven by a desire to automate processes, architect dependable infrastructure, and create organized systems that serve as foundation for data-driven innovation.
 
 Skills
 ======
