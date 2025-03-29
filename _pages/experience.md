@@ -11,9 +11,9 @@ Centrova
 ======
 **Software Engineer (Boston, MA)**  
 _February 2025 – Present_  
-- Built an end-to-end **data pipeline** to ingest patient EHR data and **ClinicalTrials.gov** records, leveraged **Azure OpenAI** to automate patient eligibility screening based on trial criteria  
+- Built an ETL pipeline to ingest **patient EHR data** and **ClinicalTrials.gov** records, leveraged **Azure OpenAI** to automate patient eligibility screening based on trial criteria
 - Developed **serverless REST APIs** with **AWS Lambda, API Gateway, Firebase Authentication**, and automated infrastructure provisioning using **Pulumi** for reproducible deployments across environments  
-- Designed relational schemas in **PostgreSQL** to manage patient data, trial evaluations, user accounts, and audit logs, optimized query performance with indexing and caching  
+- Designed **relational schemas** in **PostgreSQL** to manage patient data, trial evaluations, user accounts, and audit logs, optimized query performance with indexing and caching  
 - Implemented a **CI/CD pipeline** with **GitHub Actions** to automate testing, infrastructure provisioning, and preview deployments triggered by push and pull request events  
 
 ---
@@ -22,7 +22,7 @@ Harvard Medical School & Massachusetts General Hospital
 ======
 **Computational Analyst (Boston, MA)**  
 _April 2024 – Present_  
-- Deployed **bioinformatics pipelines** using **Bash** and **WDL**, leveraged **Google Cloud Batch** to scalably process **25 TB of multi-omics data** from **1000+ patient biopsies** to accelerate liver metastasis research  
+- Deployed **bioinformatics** pipelines using **Bash** and **WDL**, leveraged **Google Cloud Batch** to scalably process **25 TBs of multi-omics data** from **1500+ patient biopsies** to accelerate liver metastasis research  
 - Appointed as **Data Manager** to oversee storage governance across **HPC servers** and **Google Cloud Storage**, streamlined data movement with external collaborators, and **reduced long-term storage costs by 20%**  
 - Containerized **Linux** genomic analysis tools with **Docker** to enable reproducible somatic and copy number variation detection workflows across **Google Cloud Engines** and **SLURM clusters**  
 - Integrated experimental data from clinicians with public **genomic databases**, generated interactive **Plotly** visualizations to support data-driven research decisions  
