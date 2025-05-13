@@ -7,9 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-My name is Garrett Lam. I’m an aspiring **Cloud Data Engineer** passionate about building scalable systems that transform complex data into actionable insights. I specialize in data engineering, cloud computing, and software development, with experience developing large-scale infrastructure at institutions, such as the Broad Institute of MIT and Harvard, Salk Institute for Biological Studies, UCSD Altman Clinical and Translational Research Institute, and UCSD Health.
-
-With a **B.S. in Computer Science & Bioinformatics** from **UC San Diego**, I've contributed to projects involving cloud-native pipelines, performance optimization, and infrastructure design. I'm driven by a desire to automate processes, architect dependable infrastructure, and create organized systems that serve as foundation for data-driven innovation.
+My name is Garrett Lam. I am passionate about engineering scalable systems that transform big data into actionable insights. With expertise in data engineering, cloud computing, and artificial intelligence, my work centers around automating workflows, deploying cloud-native pipelines, and building agentic systems that drive data-driven innovation.
 
 💻 Tech Stack
 ======
