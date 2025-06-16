@@ -9,32 +9,32 @@ author_profile: true
 
 Centrova
 ======
-**Software Engineer (Boston, MA)**  
+**Data Engineer (Boston, MA)**  
 _February 2025 – Present_  
-- Built an ETL pipeline to ingest **patient EHR data** and **ClinicalTrials.gov** records, leveraged **Azure OpenAI** to automate patient eligibility screening based on trial criteria
-- Developed **serverless REST APIs** with **AWS Lambda, API Gateway, Firebase Authentication**, and automated infrastructure provisioning using **Pulumi** for reproducible deployments across environments  
-- Designed **relational schemas** in **PostgreSQL** to manage patient data, trial evaluations, user accounts, and audit logs, optimized query performance with indexing and caching  
-- Implemented a **CI/CD pipeline** with **GitHub Actions** to automate testing, infrastructure provisioning, and preview deployments triggered by push and pull request events  
+- Built an ETL pipeline to automate patient-to-trial matching, improving screening efficiency by **42%** through **AI-driven parsing** of **EHR data** and trial criteria using **Azure OpenAI**
+- Reduced backend infrastructure costs by **30%** and enabled frontend integration through deploying **serverless REST APIs** for patient and trial data access, using **AWS Lambda, API Gateway, Firebase Auth, and Pulumi**
+- Designed **relational schemas** in **PostgreSQL** to manage patient data, trial evaluations, audit logs, reducing query time by **22%** through data modeling, indexing, and caching
+- Implemented **CI/CD workflows** with **GitHub Actions** to validate and deploy codebase changes, accelerating development through automated unit testing and infrastructure provisioning
 
 ---
 
 Harvard Medical School & Massachusetts General Hospital  
 ======
-**Computational Analyst (Boston, MA)**  
+**Data Scientist (Boston, MA)**  
 _April 2024 – Present_  
-- Deployed **bioinformatics** pipelines using **Bash** and **WDL**, leveraged **Google Cloud Batch** to scalably process **25 TBs of multi-omics data** from **1500+ patient biopsies** to accelerate liver metastasis research  
-- Appointed as **Data Manager** to oversee storage governance across **HPC servers** and **Google Cloud Storage**, streamlined data movement with external collaborators, and **reduced long-term storage costs by 20%**  
-- Containerized **Linux** genomic analysis tools with **Docker** to enable reproducible somatic and copy number variation detection workflows across **Google Cloud Engines** and **SLURM clusters**  
-- Integrated experimental data from clinicians with public **genomic databases**, generated interactive **Plotly** visualizations to support data-driven research decisions  
+- Deployed **bioinformatics pipelines** to scalably process **TB-scale multi-omics data** from **1500+ patient biopsies** by orchestrating parallel workflows using **Google Cloud Batch, WDL, and Bash**
+- Reduced long-term storage costs by **20%** through coordinating data movement with external collaborators on **HPC servers** and archiving cloud-native datasets with tiered **Google Cloud Storage** classes
+- Enabled cross-platform reproducibility of genomics analyses by containerizing mutation detection **Linux tools** using **Docker** on **SLURM clusters** and **GCP**
+- Built interactive dashboards using **Plotly Dash** to enable real-time clinical data exploration by integrating experimental results with public **genomic databases**
 
 ---
 
 UC San Diego Altman Clinical and Translational Research Institute  
 ======
-**Undergraduate Researcher (San Diego, CA)**  
+**Clinical Data Analyst (San Diego, CA)**  
 _April 2024 – September 2024_  
-- Utilized **BigQuery** and **SQL** to extract and transform EHR data from **10,000+ patients across 35 hospitals** from the All of Us database to predict 30-day readmission of cirrhosis patients  
-- Engineered clinical and SDoH features to train a **DNN classifier**, achieving an **AUC of 0.87**  
+- Utilized **BigQuery** and **SQL** to extract and transform **OMOP-standardized EHR data** from **10,000+ patients across 35 hospitals**, collaborated with clinicians to define cohort criteria and normalize clinical variables
+- Engineered **social determinants of health** and clinical features (**MELD score, ICD-10 codes**) to predict 30-day readmission of cirrhosis patients, achieving an **AUC of 0.87** using a **deep neural network (DNN)**
 
 ---
 
@@ -71,4 +71,4 @@ Triton Software Engineering
 **Frontend Engineer (San Diego, CA)**  
 _November 2021 – June 2022_  
 - Utilized **React-Bootstrap** to build a form for future TSE applicants and manage data of past applicants  
-- Coordinated with a team of 5 web developers and 3 UI/UX designers to build components of the form using **HTML, CSS, JavaScript**  
+- Coordinated with a team of 5 web developers and 3 UI/UX designers to build components of the form using **HTML, CSS, JavaScript**
