@@ -7,17 +7,6 @@ author_profile: true
 
 ---
 
-Centrova
-======
-**Data Engineer (Boston, MA)**  
-_February 2025 – Present_  
-- Built an ETL pipeline to automate patient-to-trial matching, improving screening efficiency by **42%** through **AI-driven parsing** of **EHR data** and trial criteria using **Azure OpenAI**
-- Reduced backend infrastructure costs by **30%** and enabled frontend integration through deploying **serverless REST APIs** for patient and trial data access, using **AWS Lambda, API Gateway, Firebase Auth, and Pulumi**
-- Designed **relational schemas** in **PostgreSQL** to manage patient data, trial evaluations, audit logs, reducing query time by **22%** through data modeling, indexing, and caching
-- Implemented **CI/CD workflows** with **GitHub Actions** to validate and deploy codebase changes, accelerating development through automated unit testing and infrastructure provisioning
-
----
-
 Harvard Medical School & Massachusetts General Hospital  
 ======
 **Data Scientist (Boston, MA)**  
@@ -26,6 +15,17 @@ _April 2024 – Present_
 - Reduced long-term storage costs by **20%** through coordinating data movement with external collaborators on **HPC servers** and archiving cloud-native datasets with tiered **Google Cloud Storage** classes
 - Enabled cross-platform reproducibility of genomics analyses by containerizing mutation detection **Linux tools** using **Docker** on **SLURM clusters** and **GCP**
 - Built interactive dashboards using **Plotly Dash** to enable real-time clinical data exploration by integrating experimental results with public **genomic databases**
+
+---
+
+Centrova
+======
+**Data Engineer (Boston, MA)**  
+_February 2025 – July 2025_  
+- Built an ETL pipeline to automate patient-to-trial matching, improving screening efficiency by **42%** through **AI-driven parsing** of **EHR data** and trial criteria using **Azure OpenAI**
+- Reduced backend infrastructure costs by **30%** and enabled frontend integration through deploying **serverless REST APIs** for patient and trial data access, using **AWS Lambda, API Gateway, Firebase Auth, and Pulumi**
+- Designed **relational schemas** in **PostgreSQL** to manage patient data, trial evaluations, audit logs, reducing query time by **22%** through data modeling, indexing, and caching
+- Implemented **CI/CD workflows** with **GitHub Actions** to validate and deploy codebase changes, accelerating development through automated unit testing and infrastructure provisioning
 
 ---
 
