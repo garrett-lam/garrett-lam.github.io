@@ -11,10 +11,11 @@ Harvard Medical School & Massachusetts General Hospital
 ======
 **Data Scientist (Boston, MA)**  
 _April 2024 – Present_  
-- Deployed **bioinformatics pipelines** to scalably process **TB-scale multi-omics data** from **1500+ patient biopsies** by orchestrating parallel workflows using **Google Cloud Batch, WDL, and Bash**
-- Reduced long-term storage costs by **20%** through coordinating data movement with external collaborators on **HPC servers** and archiving cloud-native datasets with tiered **Google Cloud Storage** classes
-- Enabled cross-platform reproducibility of genomics analyses by containerizing mutation detection **Linux tools** using **Docker** on **SLURM clusters** and **GCP**
-- Built interactive dashboards using **Plotly Dash** to enable real-time clinical data exploration by integrating experimental results with public **genomic databases**
+- Engineered scalable bioinformatics pipelines to process TB-scale multimodal data from 1500+ patient biopsies, supporting
+mutation discovery and ML modeling by leveraging cloud-based solutions (Google Cloud Batch, WDL, Bash)
+- Optimized storage workflows by automating ad hoc usage reports, coordinating data migration with external collaborators on HPC systems, and leveraging tiered Google Cloud Storage classes to cut long-term costs by 20%
+- Containerized Linux-based mutation detection tools using Docker on SLURM clusters and GCP to ensure cross-platform reproducibility of genomics analyses, enabling portable workflows with standardized results
+- Developed real-time interactive dashboards with Plotly Dash to unify clinical findings with public genomics databases, enhancing data-driven decision making and advancing cancer research
 
 ---
 
@@ -22,10 +23,10 @@ Centrova
 ======
 **Data Engineer (Boston, MA)**  
 _February 2025 – July 2025_  
-- Built an ETL pipeline to automate patient-to-trial matching, improving screening efficiency by **42%** through **AI-driven parsing** of **EHR data** and trial criteria using **Azure OpenAI**
-- Reduced backend infrastructure costs by **30%** and enabled frontend integration through deploying **serverless REST APIs** for patient and trial data access, using **AWS Lambda, API Gateway, Firebase Auth, and Pulumi**
-- Designed **relational schemas** in **PostgreSQL** to manage patient data, trial evaluations, audit logs, reducing query time by **22%** through data modeling, indexing, and caching
-- Implemented **CI/CD workflows** with **GitHub Actions** to validate and deploy codebase changes, accelerating development through automated unit testing and infrastructure provisioning
+- Constructed an ETL pipeline to automate patient-to-trial matching, boosting screening efficiency by 42% through NLP-based parsing of EHR data, creation of embeddings using ClinicalBERT, and retrieval-augmented generation (RAG)
+- Optimized backend infrastructure costs by 30% and enabled frontend integration by deploying REST APIs for patient and trial data access using serverless cloud platforms (AWS Lambda, API Gateway, Firebase Auth, Pulumi)
+- Designed relational schemas in PostgreSQL to manage patient data, trial evaluations, audit logs, reducing query time by 22% through strategic data modeling, indexing, and caching
+- Implemented CI/CD workflows with GitHub Actions to automate unit testing, infrastructure provisioning, and codebase deployments, accelerating the software development life cycle (SDLC)
 
 ---
 
@@ -33,8 +34,8 @@ UC San Diego Altman Clinical and Translational Research Institute
 ======
 **Clinical Data Analyst (San Diego, CA)**  
 _April 2024 – September 2024_  
-- Utilized **BigQuery** and **SQL** to extract and transform **OMOP-standardized EHR data** from **10,000+ patients across 35 hospitals**, collaborated with clinicians to define cohort criteria and normalize clinical variables
-- Engineered **social determinants of health** and clinical features (**MELD score, ICD-10 codes**) to predict 30-day readmission of cirrhosis patients, achieving an **AUC of 0.87** using a **deep neural network (DNN)**
+- Migrated and transformed OMOP-standardized EHR data for 10,000+ patients across 35 hospitals into analytics-ready schemas using SQL and BigQuery, facilitating the training of clinical AI models
+- Engineered clinical and social determinants of health features (MELD score, ICD-10 codes) to predict 30-day readmission of cirrhosis patients using a random forest classifier, achieving an AUC of 0.87
 
 ---
 
