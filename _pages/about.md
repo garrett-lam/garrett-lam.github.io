@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-My name is Garrett Lam. I am passionate about engineering scalable systems that transform big data into actionable insights. With expertise in data engineering, cloud computing, and artificial intelligence, my work centers around automating workflows, deploying cloud-native pipelines, and building agentic systems that drive data-driven innovation.
+My name is Garrett Lam. I am passionate about engineering scalable systems that transform big data into actionable insights. With expertise in data engineering, cloud computing, and artificial intelligence, my work centers on automating workflows, deploying cloud-native pipelines, and building data-driven products. 
 
 💻 Tech Stack
 ======
